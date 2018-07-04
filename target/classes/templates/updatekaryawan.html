@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	 <h1>Insert Karyawan</h1>
+        <form action="updatekaryawan" method="POST">
+            <table>
+                <tr>
+                    <td>id</td>
+                    <td><input type="text" name="id" th:value="${karyawan.id}"/></td>
+                </tr>
+                <tr>
+                    <td>Nama</td>
+                    <td><input type="text" name="namaKaryawan" th:value="${karyawan.namaKaryawan}"/></td>
+                </tr>
+                <tr>
+                    <td>departemen</td>
+                    <td>
+                        <select name="departemenid">
+                            <option value="" >Pilih departemen </option>
+                            	<th:block th:each="d : ${listdepartemen}">
+                            <option  selected="" ><span th:text="${d.namaDepartemen}"></span></option>
+                            	</th:block>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <button type="submit">submit </button>
+        </form>
+</body>
+</html>

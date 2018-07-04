@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	  <h1>Update Departemen </h1>
+        <form method="post" action="updatedepartemen">
+            <table>
+                <tr>
+                    <th>ID :</th>
+                    <th><input type="text" name="id" th:value="${departemen.id}" readonly/></th>
+                </tr>    
+                <tr>
+                 <th>Nama Departemen :</th>
+                 <th><input type="text" name="namaDepartemen" th:value="${departemen.namaDepartemen}"/></th>
+                </tr>
+                <tr>
+                	<td><button type="submit"> Submit</button></td>
+                </tr>
+                 
+            </table>
+        </form>
+</body>
+</html>
